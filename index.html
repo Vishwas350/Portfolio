@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vishwas S | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #6c63ff;
+      --dark: #121212;
+      --light: #f8f9fa;
+      --gray: #2d2d2d;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background-color: var(--dark);
+      color: var(--light);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    header {
+      padding: 2rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--gray);
+    }
+    #about h1{
+      font-size: 4rem;
+
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    nav ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    nav a {
+      color: var(--light);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: var(--primary);
+    }
+    .hero {
+      margin-top: 60px;
+      padding: 4rem 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    .profile-img {
+      height: 400px;
+      width: 400px;
+      border-radius: 50%;
+      background-color: hsla(0, 0%, 22%, 0.44) ;
+      border:3px solid rgba(108, 99, 255, 0.2);
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      font-size: 3rem;
+      margin: 2rem 0 1rem;
+      color: var(--primary);
+    }
+    .bio {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+    .skills-list {
+      display: flex;
+            list-style: none;
+
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .skills-list li {
+      background-color: var(--primary);
+      color: var(--light);
+      list-style: none;
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+    }
+    .certifications {
+
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .certifications li {
+      list-style: none;
+      background-color: var(--gray);
+      padding: 1.5rem;
+      border-radius: 8px;
+      border-left: 4px solid var(--primary);
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    .project {
+      background-color: var(--gray);
+      padding: 1.5rem;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+    .project:hover {
+      transform: translateY(-5px);
+    }
+    .project h3 {
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+    .project a {
+      display: inline-block;
+      margin-top: 1rem;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .contact {
+      margin: 3rem 0;
+    }
+
+    .contact i {
+      padding: 10px;
+      margin-top: 20px;
+      background-color: var(--primary);
+      border-radius: 50%;
+      font-size: 30px;
+    }
+    .custom-section li{
+      margin-top: 20px;
+    }
+
+    .contact  a {
+      text-decoration: none;
+      color: white;
+    }
+    .contact a i:hover{
+      background-color: white;
+      color: black;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      border-top: 1px solid var(--gray);
+      margin-top: 3rem;
+    }
+    @media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .profile-img {
+    width: 250px;
+    height: 250px;
+    margin: auto;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .skills-list {
+    justify-content: center;
+  }
+
+  .certifications,
+  .projects {
+    grid-template-columns: 1fr;
+  }
+
+  .contact {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-img {
+    width: 180px;
+    height: 180px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .skills-list li {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .contact i {
+    font-size: 2.5rem;
+    padding: 8px;
+  }
+
+  nav ul {
+    gap: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  footer p {
+    font-size: 0.85rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">Vishwas S</div>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <section class="hero" id="about">
+      <img src="1000129265.jpg" alt="Profile Image" class="profile-img">
+      <div>
+        <h1>Hi, I'm Vishwas S</h1>
+        <p class="bio">Creative and motivated UI/UX Designer and Computer Science Engineering student passionate about designing intuitive, user-focused digital experiences. Skilled in blending design thinking with front-end development to craft clean, accessible interfaces that connect people and technology.</p>
+      </div>
+      
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-list">
+        <li>UX Research & User Testing</li><li>Wireframing</li><li>Product Discovery</li><li>Prototyping</li><li>UI Design</li><li>Interaction Design</li><li>Design Systems</li><li>Information Architecture</li><li>A/B Testing</li><li>Agile Collaboration</li><li>HTML, CSS</li><li>Graphic Design</li>
+      </div>
+    </section>
+
+    <section id="certifications">
+      <h2>Certifications</h2>
+      <div class="certifications">
+        <li>Digital Skills: User Experience – Accenture (Score: 89%)</li><li>Microsoft Certified: Azure Fundamentals (AZ-900)</li><li>C Programming Certification</li>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="project"><h3>AI-Based Project Planner</h3><p>Designed an AI-driven task planner using NLP-based project scheduling. Created user flows and dashboards to improve productivity. Simplified workflow visualization using interactive task mapping</p></div><div class="project"><h3>AI-Based Project Planner</h3><p>Designed an AI-driven task planner using NLP-based project scheduling. Created user flows and dashboards to improve productivity. Simplified workflow visualization using interactive task mapping</p></div>
+      </div>
+    </section>
+    <section>
+      
+    </section>
+    <section class="contact" id="contact">
+      <h2>Get In Touch</h2>
+      
+          <div class="contact">
+            <h3><i class="fas fa-phone"></i> 9944105162</h3>
+            <h3><i class="fas fa-envelope"></i> vishwasb.v.s.c@gmail.com</h3>
+            <a href="https://www.linkedin.com/in/vishwassridhar" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Vishwas350?tab=repositories" target="_blank"><i class="fab fa-github"></i></a>
+          </div>
+
+    </section>
+    
+
+    <footer>
+      <p>&copy;  Vishwas S. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
